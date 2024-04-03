@@ -24,8 +24,8 @@
 
             <main class=" mt-5">
                 <div class="text-center">
-                    <input type="text" placeholder="Scrivi quì" class="rounded-2 ms-width-input" v-model="newTodoText">
-                    <button class="ms-2 rounded-2 ">inserisci</button>
+                    <input type="text" placeholder="Scrivi quì" class="rounded-2 ms-width-input" v-model="newTask">
+                    <button class="ms-2 rounded-2 " @click="createNewTask">inserisci</button>
                 </div>
 
 

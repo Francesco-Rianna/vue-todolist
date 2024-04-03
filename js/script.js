@@ -20,6 +20,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newTask: '',
             todo: [
                 {
                     text: "fare la spesa",
@@ -29,7 +30,8 @@ createApp({
                     text: "giocare con i bimbi",
                     done: true
                 }
-            ]
+            ],
+
         }
     },
 
@@ -37,6 +39,18 @@ createApp({
         //  funzione che al clik elimina la task
         deleteTask(indexToDelete) {
             this.todo.splice(indexToDelete, 1);
+        },
+
+        // funzione per far aggiungere task all'utente
+
+        createNewTask() {
+            const newTodo = {
+                text: this.newTask,
+                done: false
+            };
+            this.todo.unshift(newTodo)
+            this.newTask = ''
         }
+
     }
 }).mount('#app');
