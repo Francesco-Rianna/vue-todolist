@@ -1,0 +1,17 @@
+.ms-width-input {
+    width: 200px;
+}
+
+.ms-task {
+    width: 80%;
+    background-color: lightblue;
+    margin: 0 auto;
+}
+
+.is-done {
+    text-decoration: line-through;
+}
+
+button {
+    cursor: pointer;
+}
