@@ -31,5 +31,12 @@ createApp({
                 }
             ]
         }
+    },
+
+    methods: {
+        //  funzione che al clik elimina la task
+        deleteTask(indexToDelete) {
+            this.todo.splice(indexToDelete, 1);
+        }
     }
 }).mount('#app');

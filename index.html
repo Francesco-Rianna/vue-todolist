@@ -29,13 +29,13 @@
                 </div>
 
 
-                <div class="ms-task p-4 mt-3 d-flex justify-content-between" v-for="list in todo">
+                <div class="ms-task p-4 mt-3 d-flex justify-content-between" v-for="list, index in todo">
                     <span class="bg-light" :class="{'is-done': list.done}">
                         {{ list.text }}
                     </span>
 
                     <span>
-                        <i class=" fa-solid fa-xmark"></i>
+                        <i class=" fa-solid fa-xmark" @click="deleteTask(index)"></i>
                     </span>
 
                 </div>
